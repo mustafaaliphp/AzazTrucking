@@ -1,0 +1,13 @@
+{
+    "callerRequestId":"",
+    "callerApplicationName":"",
+    "callerId":"",
+    "taskName": "",
+    "encodedMessage":"",
+    "additionalInfo": [
+        {
+            "name":"",
+            "value":""
+        }
+    ]
+}
