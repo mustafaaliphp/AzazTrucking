@@ -52,13 +52,7 @@ public class AzazTruckingController {
 			throw new MissingInputException("Missing input");
 		}
 		
-
-		
-			
-		
 		return new ResponseEntity<AzResponse>(HttpStatus.OK);
-		
-		
 	}
 	
 	
