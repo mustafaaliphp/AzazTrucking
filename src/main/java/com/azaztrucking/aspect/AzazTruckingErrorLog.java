@@ -1,3 +1,3 @@
-package com.az.aspect;
+package com.azaztrucking.aspect;
 
 public @interface AzazTruckingErrorLog {}

@@ -1,4 +1,4 @@
-package com.az.model;
+package com.azaztrucking.model;
 
 public class Task {
 

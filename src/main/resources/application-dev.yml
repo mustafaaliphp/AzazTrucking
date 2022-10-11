@@ -1,0 +1,16 @@
+logging:
+  level:
+    root: ERROR
+    '[org.springframework.web]': ERROR
+    '[com.azaztrucking]': DEBUG
+    '[org.hibernate]': ERROR
+
+spring:
+  datasource:
+    password: admin123
+    url: jdbc:mysql://localhost:3306/azaz_trucking
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

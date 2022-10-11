@@ -1,4 +1,4 @@
-package com.az.model;
+package com.azaztrucking.model;
 
 import java.sql.Timestamp;
 

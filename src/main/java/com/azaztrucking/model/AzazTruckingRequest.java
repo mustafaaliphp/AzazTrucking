@@ -1,5 +1,5 @@
 
-package com.az.model;
+package com.azaztrucking.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,7 +32,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 })
 @Data
 @ToString
-public class AzRequest {
+public class AzazTruckingRequest {
 
     @JsonProperty("callerRequestId")
     private String callerRequestId;

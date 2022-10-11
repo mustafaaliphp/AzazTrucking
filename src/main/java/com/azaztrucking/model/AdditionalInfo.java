@@ -1,5 +1,5 @@
 
-package com.az.model;
+package com.azaztrucking.model;
 
 import java.util.HashMap;
 import java.util.Map;

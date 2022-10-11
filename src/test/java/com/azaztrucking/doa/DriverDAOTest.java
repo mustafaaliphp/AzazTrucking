@@ -17,8 +17,16 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
-import com.az.doa.DriverDAO;
-import com.az.model.Driver;
+import com.azaztrucking.common.AzazTruckingCommonUtils;
+import com.azaztrucking.doa.DriverDAO;
+import com.azaztrucking.handler.GetAllDriversHandler;
+import com.azaztrucking.model.AzazTruckingRequest;
+import com.azaztrucking.model.AzazTruckingResponse;
+import com.azaztrucking.model.Driver;
+import com.azaztrucking.service.AzazTruckingService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest
 public class DriverDAOTest {
@@ -30,7 +38,8 @@ public class DriverDAOTest {
 	
 	@Test
 	public void itShouldFindAllDrivers() {
-		
+//		String mockRequest = AzazCommonUtils.readFileAsString("/az/azservice/GET_ALL_DRIVERS.json");
+//		System.out.println("mockRequest" + mockRequest);
 		List<Driver> expectedListOfDrivers = new ArrayList();
 		Driver driver1 = new Driver(1L,"Ali","Mustafa","","mm@mm.com","",new Timestamp(new Date().getTime())); 
 		Driver driver2 = new Driver(1L,"Ali","Mustafa","","mm@mm.com","",new Timestamp(new Date().getTime())); 
@@ -43,4 +52,7 @@ public class DriverDAOTest {
 		Assert.assertEquals(0, 0);
 		
 	}
+	
+	
+
 }

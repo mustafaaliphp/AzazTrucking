@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    password: admin123
+    url: jdbc:mysql://localhost:3306/azaz_trucking
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

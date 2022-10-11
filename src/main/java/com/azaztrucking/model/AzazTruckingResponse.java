@@ -1,4 +1,4 @@
-package com.az.model;
+package com.azaztrucking.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,13 +20,15 @@ import lombok.ToString;
     "callerApplicationName",
     "callerId",
     "taskName",
+    "status",
+    "code",
     "encodedMessage",
     "errorMessage",
     "additionalInfo"
 })
 @Data
 @ToString
-public class AzResponse {
+public class AzazTruckingResponse {
 
 	@JsonProperty("azId")
 	private String azId;
@@ -38,6 +40,10 @@ public class AzResponse {
     private String callerId;
     @JsonProperty("taskName")
     private String taskName;
+    @JsonProperty("status")
+    private String status;
+    @JsonProperty("code")
+    private String code;
     @JsonProperty("encodedMessage")
     private String encodedMessage;
     @JsonProperty("errorMessage")

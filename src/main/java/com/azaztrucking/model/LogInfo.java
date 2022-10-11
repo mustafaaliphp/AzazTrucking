@@ -1,4 +1,4 @@
-package com.az.model;
+package com.azaztrucking.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

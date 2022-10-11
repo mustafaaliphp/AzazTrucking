@@ -1,4 +1,4 @@
-package com.az.doa;
+package com.azaztrucking.doa;
 
 
 import java.io.IOException;
@@ -16,7 +16,7 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.az.model.Driver;
+import com.azaztrucking.model.Driver;
 
 import org.apache.commons.io.IOUtils;
 

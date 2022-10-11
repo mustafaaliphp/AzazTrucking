@@ -1,4 +1,4 @@
-package com.az.aspect;
+package com.azaztrucking.aspect;
 //package com.azaztrucking.aspect;
 //
 //import java.util.Arrays;

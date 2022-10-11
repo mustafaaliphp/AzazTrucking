@@ -1,4 +1,4 @@
-package com.az.aspect;
+package com.azaztrucking.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -6,8 +6,8 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
-import com.az.doa.LogInfoDAO;
-import com.az.model.LogInfo;
+import com.azaztrucking.doa.LogInfoDAO;
+import com.azaztrucking.model.LogInfo;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.Getter;

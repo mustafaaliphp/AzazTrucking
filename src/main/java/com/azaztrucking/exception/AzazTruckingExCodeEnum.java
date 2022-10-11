@@ -1,6 +1,6 @@
-package com.az.exception;
+package com.azaztrucking.exception;
 
-import com.az.model.ErrorDetail;
+import com.azaztrucking.model.ErrorDetail;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,7 +14,9 @@ public enum AzazTruckingExCodeEnum {
 
 	MANDATORY_INPUT("AZ1", "Missing Input"),
 	NOT_FOUND("AZ2", "Not Found"),
-	SQL_EXCEPTION("AZ3", "SQL Exception");
+	SQL_EXCEPTION("AZ3", "SQL Exception"),
+	INVALID_INPUT("AZ4", "Invalid Input"),
+	INTERNAL_SERVER_ERROR("AZ5", "Internal Server Error");
 	
 	private String code;
 	private String message;
