@@ -48,7 +48,6 @@ public class DriverDAOTest {
 	
 	@Test
 	public void itShouldFindAllDrivers() {
-//		String mockRequest = AzazCommonUtils.readFileAsString("/az/azservice/GET_ALL_DRIVERS.json");
 		List<Driver> expectedResponse = new ArrayList<>();
 		Driver driver1 = new Driver(1L,"Ali","Mustafa","","mm@mm.com","",new Timestamp(new Date().getTime())); 
 		Driver driver2 = new Driver(1L,"Ali","Mustafa","","mm@mm.com","",new Timestamp(new Date().getTime())); 

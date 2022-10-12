@@ -23,6 +23,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 import com.azaztrucking.common.AzazTruckingCommonUtils;
 import com.azaztrucking.doa.DriverDAO;
+import com.azaztrucking.handler.AddDriverHandler;
 import com.azaztrucking.handler.GetAllDriversHandler;
 import com.azaztrucking.model.AzazTruckingRequest;
 import com.azaztrucking.model.AzazTruckingResponse;
@@ -37,21 +38,41 @@ public class AzazTruckingServiceTest {
 	
 
 
-	@InjectMocks   AzazTruckingService azazTruckingService;
+	@InjectMocks  AzazTruckingService azazTruckingService;
 	@Mock private GetAllDriversHandler getAllDriversHandler;
+	@Mock private AddDriverHandler addDriverHandler;
 	
 	@Test
-	public void itShouldReturnMessageCode() throws JsonMappingException, JsonProcessingException {
-		String mockRequest = AzazTruckingCommonUtils.readFileAsString("/az/azservice/GET_ALL_DRIVERS.json");
+	public void itShouldReturnGetAllDriversSuccessStatus() throws JsonMappingException, JsonProcessingException {
+		String mockRequest = AzazTruckingCommonUtils.readFileAsString("/azaztrucking/azservice/GET_ALL_DRIVERS_REQUEST.json");
 		ObjectMapper objectMapper = new ObjectMapper();
 		AzazTruckingRequest azazTruckingRequest  = objectMapper.readValue(mockRequest, AzazTruckingRequest.class);
 		
-		AzazTruckingResponse mockAzResponse = new AzazTruckingResponse();
-		mockAzResponse.setTaskName("getAllDrivers");
+		AzazTruckingResponse expectedResponse = new AzazTruckingResponse();
+		expectedResponse.setStatus("Success");
+	
+		when(getAllDriversHandler.getDrivers(Mockito.any())).thenReturn(expectedResponse);
+		
+		AzazTruckingResponse actualResponse = azazTruckingService.processAZInq(azazTruckingRequest);
+		
+		Assert.assertEquals(expectedResponse.getStatus(), actualResponse.getStatus());
+		
 //		verify(print, atLeastOnce()).printString(Mockito.anyString());
-		when(getAllDriversHandler.getDrivers(Mockito.any())).thenReturn(mockAzResponse);
-		AzazTruckingResponse AzazTruckingResponse = azazTruckingService.processAZInq(azazTruckingRequest);
-		Assert.assertEquals(AzazTruckingResponse.getTaskName(), mockAzResponse.getTaskName());
-
+	}
+	
+	@Test
+	public void itShouldReturnAddDriverSuccessStatus() throws JsonMappingException, JsonProcessingException {
+		String mockRequest = AzazTruckingCommonUtils.readFileAsString("/azaztrucking/azservice/ADD_DRIVER_REQUEST.json");
+		ObjectMapper objectMapper = new ObjectMapper();
+		AzazTruckingRequest azazTruckingRequest  = objectMapper.readValue(mockRequest, AzazTruckingRequest.class);
+		
+		AzazTruckingResponse expectedResponse = new AzazTruckingResponse();
+		expectedResponse.setStatus("Success");
+	
+		when(addDriverHandler.addDriver(Mockito.any())).thenReturn(expectedResponse);
+		
+		AzazTruckingResponse actualResponse = azazTruckingService.processAZInq(azazTruckingRequest);
+		
+		Assert.assertEquals(expectedResponse.getStatus(), actualResponse.getStatus());
 	}
 }

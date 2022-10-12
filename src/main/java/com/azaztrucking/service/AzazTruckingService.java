@@ -21,7 +21,7 @@ import lombok.extern.slf4j.Slf4j;
 public class AzazTruckingService {
 
 	private final GetAllDriversHandler getAllDriversHandler;
-	private final AddDriverHandler addDriverHandler;;
+	private final AddDriverHandler addDriverHandler;
 	public AzazTruckingResponse processAZInq(AzazTruckingRequest azazTruckingRequest) {
 		
 		log.info("[BEGIN] - processAzInq method: ");
