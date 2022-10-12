@@ -1,0 +1,14 @@
+{
+  
+    "callerRequestId":"12122121",
+    "callerApplicationName":"AZAZ",
+    "callerId":"ma123",
+    "taskName": "addDriver",
+    "encodedMessage":"",
+    "additionalInfo": [
+        {
+            "name":"",
+            "value":""
+        }
+    ]
+}
