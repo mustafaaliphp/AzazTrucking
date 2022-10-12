@@ -11,30 +11,21 @@ import org.junit.Assert;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-
-import com.azaztrucking.common.AzazTruckingCommonUtils;
-import com.azaztrucking.doa.DriverDAO;
-import com.azaztrucking.handler.GetAllDriversHandler;
-import com.azaztrucking.model.AzazTruckingRequest;
-import com.azaztrucking.model.AzazTruckingResponse;
 import com.azaztrucking.model.Driver;
-import com.azaztrucking.service.AzazTruckingService;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
-@SpringBootTest
+@JdbcTest
 public class DriverDAOTest {
 
 	@InjectMocks private DriverDAO driverDAO;
-	@Mock NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-	@Mock JdbcTemplate jdbcTemplate;
+	@Mock private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+	@Mock private JdbcTemplate jdbcTemplate;
 	
 	@Test
 	public void itShouldInsertDriver() {
