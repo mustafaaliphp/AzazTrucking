@@ -55,12 +55,12 @@ public class DriverDAO {
 		return drivers;
 	}
 	
-	public Driver findDriver(Long driverID) {
+	public Driver findDriverById(Long driverID) {
 		
 		   String sql = "select * from drivers WHERE driver_id : driverID";
 		   MapSqlParameterSource parameters = new MapSqlParameterSource();
 		   parameters.addValue("driverID", driverID);
-		   Driver driver =  (Driver) namedParameterJdbcTemplate.query(sql, parameters, new BeanPropertyRowMapper<>(Driver.class));
+		   Driver driver =  namedParameterJdbcTemplate.queryForObject(sql, parameters, new BeanPropertyRowMapper<>(Driver.class));
 		   return driver;
 		
 	}
