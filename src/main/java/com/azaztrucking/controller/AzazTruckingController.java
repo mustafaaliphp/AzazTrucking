@@ -28,7 +28,7 @@ public class AzazTruckingController {
 	private final AzazTruckingService azazTruckingService;
 	
 	@AzazTruckingLog
-	@PostMapping(path="/azinq", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	//@PostMapping(path="/azinq", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<AzazTruckingResponse> addDriver(@RequestBody AzazTruckingRequest azazTruckingRequest, WebRequest webRequest){
 		webRequest.setAttribute("azRequest", azazTruckingRequest, RequestAttributes.SCOPE_REQUEST);
 		azazTruckingRequest.setAzId(AzazTruckingCommonUtils.getUuiBuilder("AZ").toString());
