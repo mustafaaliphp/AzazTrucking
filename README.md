@@ -36,4 +36,18 @@ Response:</br>
 }
 </br>
 
-
+Get All Drivers Request body: </br>
+{
+    "callerRequestId":"12122121",
+    "callerApplicationName":"AS",
+    "callerId":"id",
+    "taskName": "getAllDrivers",
+    "encodedMessage":"",
+    "additionalInfo": [
+        {
+            "name":"",
+            "value":""
+        }
+    ]
+}
+</br>
