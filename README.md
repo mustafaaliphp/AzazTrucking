@@ -1,5 +1,6 @@
 # AzazTrucking
 ![add](https://github.com/mustafaaliphp/spring-microservice/assets/53540870/1ab175c9-6253-424b-bde6-1e6c5b289f62)
+![getAllDrivers](https://github.com/mustafaaliphp/spring-microservice/assets/53540870/a061ff13-e6fd-4b04-8f68-7a3944d07a18)
 RequestURL: http://localhost:8080/azinq </br>
 Add driver request body:</br>
 
