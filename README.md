@@ -1,6 +1,6 @@
 # AzazTrucking
 RequestURL: http://localhost:8080/azinq </br>
-Add driver request body:
+Add driver request body:</br>
 {
   
     "callerRequestId":"12122121",
@@ -15,8 +15,8 @@ Add driver request body:
         }
     ]
 }
-
-Response:
+</br>
+Response:</br>
 {
     "azId": "AZ1687585382742998aa3cf8332422595908dd274cbd844",
     "callerApplicationName": "AS",
@@ -27,5 +27,5 @@ Response:
     "encodedMessage": "ZHJpdmVyIGFkZGVk",
     "additionalInfo": []
 }
-
+</br>
 
